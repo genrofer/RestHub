@@ -1,0 +1,15 @@
+.more-btn {
+     margin-left: 4.5%;
+     margin-top: 10px;
+     cursor: pointer;
+     button {
+          font-size: 18px;
+          background: red;
+          color: white;
+          border: none;
+          box-shadow: 0 0 4px 8px red;
+          font-family: "Ubuntu", sans-serif;
+          padding: 2px 15px;
+          border-radius: 20px;
+     }
+}

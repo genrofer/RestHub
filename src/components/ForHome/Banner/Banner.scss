@@ -1,0 +1,333 @@
+@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+     background: $bcolor;
+     -webkit-mask: url($url);
+     mask: url($url);
+     -webkit-mask-size: $x1 $y1;
+     mask-size: $x1 $y1;
+     border: $bor;
+     color: $col;
+}
+
+.banner {
+     width: 100%;
+     height: 100vh;
+     position: relative;
+     top: 0;
+     box-shadow: 0 0 155px 5px rgba(0, 0, 0, 0.5);
+
+     .text {
+          width: 40%;
+          color: white;
+          margin-top: 10%;
+          margin-left: 20px;
+          padding: 50px;
+          background: rgba(0, 0, 0, 0.489);
+          border-radius: 5px;
+          box-shadow: 0 0 12px 7px rgba(0, 0, 0, 0.463);
+
+          h1 {
+               font-size: 60px;
+               font-weight: bold;
+               letter-spacing: 1px;
+               margin-top: -30px;
+          }
+
+          p {
+               margin-top: 15px;
+          }
+
+          .overview {
+               font-family: sans-serif;
+               max-width: 520px;
+               width: 100%;
+          }
+     }
+
+     .slide-bg {
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: absolute;
+          width: 100%;
+          top: 0;
+          background-position: center;
+          color: rgba(51, 51, 51, 0.998);
+          padding-bottom: 30px;
+     }
+
+     .year {
+          display: flex;
+          align-items: center;
+          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+          p {
+               font-size: 18px;
+          }
+
+          .over {
+               border: 2px solid red;
+               padding: 1px 9px;
+               border-radius: 5px;
+          }
+
+          .lang {
+               text-transform: capitalize;
+          }
+     }
+}
+
+.button-container-2 {
+     margin-top: 5vh;
+     overflow: hidden;
+     border: 1px solid red;
+     font-family: "Lato", sans-serif;
+     font-weight: 300;
+     transition: 0.5s;
+     letter-spacing: 1px;
+     border-radius: 6px;
+
+     button {
+          font-family: "Lato", sans-serif;
+          font-weight: 300;
+          font-size: 15px;
+          width: 170px;
+          letter-spacing: 1px;
+          padding: 12px 38px;
+          padding-left: 20px;
+          font-weight: bold;
+
+          @include button(
+               red,
+               "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png",
+               3000%,
+               100%,
+               blue,
+               #fff
+          );
+          cursor: pointer;
+          -webkit-animation: ani2 0.7s steps(29) forwards;
+          animation: ani2 0.7s steps(29) forwards;
+
+          &:hover {
+               -webkit-animation: ani 0.7s steps(29) forwards;
+               animation: ani 0.7s steps(29) forwards;
+          }
+     }
+}
+
+.mas {
+     color: red;
+     font-family: "Lato", sans-serif;
+     width: 170px;
+     font-weight: 300;
+     position: absolute;
+     font-size: 15px;
+     letter-spacing: 1px;
+     padding: 12px 38px;
+     padding-left: 20px;
+     background: #fff;
+     border-radius: 6px;
+     overflow: hidden;
+     font-weight: bold;
+}
+
+.mas:hover {
+     color: #fff;
+}
+
+@-webkit-keyframes ani {
+     from {
+          -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+     }
+
+     to {
+          -webkit-mask-position: 100% 0;
+          mask-position: 100% 0;
+     }
+}
+
+@keyframes ani {
+     from {
+          -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+     }
+
+     to {
+          -webkit-mask-position: 100% 0;
+          mask-position: 100% 0;
+     }
+}
+
+@-webkit-keyframes ani2 {
+     from {
+          -webkit-mask-position: 100% 0;
+          mask-position: 100% 0;
+     }
+
+     to {
+          -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+     }
+}
+
+@keyframes ani2 {
+     from {
+          -webkit-mask-position: 100% 0;
+          mask-position: 100% 0;
+     }
+
+     to {
+          -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+     }
+}
+
+a {
+     color: #00ff95;
+}
+
+@media screen and (max-width: 1000px) {
+     .banner {
+          position: relative;
+          top: 0;
+          margin-bottom: 50px;
+
+          .text {
+               width: 60%;
+               margin-top: 20%;
+
+               h1 {
+                    font-size: 50px;
+               }
+
+               .overview {
+                    max-width: 550px;
+                    font-size: 20px;
+               }
+          }
+     }
+}
+
+@media screen and (max-width: 700px) {
+     .banner {
+          position: relative;
+          top: 0;
+
+          .text {
+               width: 70%;
+               height: 67vh;
+
+               h1 {
+                    font-size: 50px;
+               }
+
+               .overview {
+                    max-width: 550px;
+                    font-size: 20px;
+               }
+          }
+
+          .watch {
+               display: flex;
+               flex-direction: column;
+
+               .button-container-2 {
+                    max-width: 250px;
+                    border: none;
+
+                    button {
+                         width: 100%;
+                         padding: 15px 10px;
+                         padding-left: 20px;
+                    }
+               }
+
+               .mas {
+                    max-width: 250px;
+                    width: 100%;
+                    text-align: center;
+                    padding: 15px 10px;
+               }
+          }
+     }
+}
+
+@media screen and (max-width: 500px) {
+     .banner {
+          position: relative;
+          top: 0;
+
+          .text {
+               width: 82%;
+               padding-right: 5px;
+               padding-top: 60px !important;
+               height: 45vh;
+               margin-top: 40%;
+               margin-left: -10px;
+               padding-bottom: 50px;
+
+               h1 {
+                    font-size: 32px;
+               }
+
+               .overview {
+                    max-width: 400px !important;
+                    font-size: 12px;
+               }
+          }
+
+          .year {
+               display: flex;
+               margin-top: -5px;
+               p {
+                    font-size: 12px;
+               }
+     
+               .over {
+                    padding: 1px 3px;
+                    border-radius: 5px;
+               }
+     
+               .lang {
+                    text-transform: capitalize;
+               }
+          }
+
+          .watch {
+               display: flex;
+               flex-direction: column;
+
+               .button-container-2 {
+                    max-width: 200px;
+                    border: none;
+
+                    button {
+                         max-width: 250px;
+                         width: 100%;
+                         display: none;
+                         padding: 15px 10px  ;
+                         padding-left: 20px;
+                    }
+               }
+
+               .mas {
+                    max-width: 150px;
+                    width: 100%;
+                    text-align: center;
+                    background: red;
+                    color: white;
+                    margin-top: -5px;
+                    padding: 10px 0px;
+                    padding-right: 0 !important;
+                    font-size: 13px !important;
+               }
+
+               .mas-class {
+                    margin-top: 55px;
+               }
+          }
+     }
+}
+
+.movie-heading-long {
+     font-size: 40px ;
+}
