@@ -50,6 +50,7 @@ const Search = () => {
                               placeholder='Search a movie, serial or tv show'
                               onKeyUp={(e) => enter(e)}
                               onChange={(e) => setSearch(e.target.value)}
+                              autoFocus
                          />
                          <i onClick={enterI} className='fas fa-search search-ico'></i>
                     </div>
