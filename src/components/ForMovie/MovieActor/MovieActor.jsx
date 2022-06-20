@@ -22,7 +22,7 @@ const MovieActor = () => {
                setMovie(resData.data.credits.cast)
           } 
           fetchMovie()   
-     }, [])
+     }, [id])
 
      useEffect(() => {
           if (window.innerWidth < 768) {

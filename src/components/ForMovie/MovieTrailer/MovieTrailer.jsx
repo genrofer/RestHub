@@ -24,7 +24,7 @@ const MovieTrailer = () => {
                setFeaturette(resData.data.videos.results.filter(video => video.type == "Featurette"))
           }
           fetchMovie()
-     }, [])
+     }, [id])
 
 
      return (

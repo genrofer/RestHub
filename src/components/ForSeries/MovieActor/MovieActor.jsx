@@ -22,7 +22,7 @@ const Horror = () => {
                setMovie(resData.data.credits.cast)
           } 
           fetchMovie()   
-     }, [])
+     }, [id])
 
      useEffect(() => {
           if (window.innerWidth < 768) {
@@ -36,7 +36,7 @@ const Horror = () => {
                     setWidth(window.innerWidth * 63.6)
                }
           }
-     }, [])
+     }, [id])
      return (
           <div id="popular ">
                <motion.div ref={popularRef} id="actor-pop" className='caro'>

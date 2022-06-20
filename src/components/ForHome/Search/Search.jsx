@@ -17,7 +17,7 @@ const Search = () => {
      const enter = (e) => {
           if (e.key === 'Enter') {
                const fetchMovie = async () => {
-                    const searchMovie = await axios.get(`http://api.themoviedb.org/3/search/multi?api_key=13d142da634f37232d727abedb6908d7&language=en-US&query=${e.target.value}&page=1`)
+                    const searchMovie = await axios.get(`https://api.themoviedb.org/3/search/multi?api_key=13d142da634f37232d727abedb6908d7&language=en-US&query=${e.target.value}&page=1`)
                     setMovie(searchMovie.data.results)
                     if (searchMovie.data.results.length === 0) {
                          alert("No results found")
@@ -29,7 +29,7 @@ const Search = () => {
 
      const enterI = () => {
           const fetchMovie = async () => {
-               const searchMovie = await axios.get(`http://api.themoviedb.org/3/search/multi?api_key=13d142da634f37232d727abedb6908d7&language=en-US&query=${search}&page=1`)
+               const searchMovie = await axios.get(`https://api.themoviedb.org/3/search/multi?api_key=13d142da634f37232d727abedb6908d7&language=en-US&query=${search}&page=1`)
                setMovie(searchMovie.data.results)
                if (searchMovie.data.results.length === 0) {
                     alert("No results found")

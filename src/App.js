@@ -8,17 +8,19 @@ import Movies from './pages/Movies/Movies';
 import Movie from './pages/Movie/Movie';
 import Series from './pages/Series/Series';
 import Search from './components/ForHome/Search/Search';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Login />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/movie/:id" element={<Movie />} />
-        <Route path="/series/:id" element={<Series />} />
-        <Route path="/search/" element={<Search />} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/signup" element={<Login />} />
+      <Route path="/movies" element={<Movies />} />
+      <Route path="/movie/:id" element={<Movie />} />
+      <Route path="/series/:id" element={<Series />} />
+      <Route path="/search/" element={<Search />} />
+      <Route path="/*" element={<NotFound />} />
+    </Routes>
   );
 }
 

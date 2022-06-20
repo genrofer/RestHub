@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
-import Banner from "../../components/ForHome/Banner/Banner"
+import Banner from "../../components/ForHome/Banner/Banner"                                                                                                                                             
 import MovieNav from "../../components/ForMovie/MovieNav/MovieNav"
 import HomeCarousel from "../../components/ForHome/HomeCarousel/HomeCarousel"
 import Actors from "../../components/ForHome/Actors/Actors"
@@ -11,9 +11,10 @@ import Kids from "../../components/ForHome/Kids/Kids"
 import Comedy from "../../components/ForHome/Comedy/Comedy"
 import Documentary from "../../components/ForHome/Documentary/Documentary"
 import Toprated from "../../components/ForHome/Toprated/Toprated"
+import Footer from "../../components/ForHome/Footer/Footer"
+import Serials from "../../components/ForSeries/Serials/Serials"
 
 import "./Movies.scss"
-import Serials from "../../components/ForSeries/Serials/Serials"
 
 const Movies = () => {
 
@@ -47,6 +48,7 @@ const Movies = () => {
                     <Toprated />
                     <Kids />
                </div>
+               {/* <Footer /> */}
           </div>
      )
 }

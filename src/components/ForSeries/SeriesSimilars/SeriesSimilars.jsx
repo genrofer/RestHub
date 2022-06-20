@@ -18,7 +18,7 @@ const Kids = () => {
                setMovie(resData.data.similar.results)
           }
           fetchMovie()
-     }, [])
+     }, [id])
 
      useEffect(() => {
           if (window.innerWidth < 768) {
@@ -47,7 +47,6 @@ const Kids = () => {
                                              }}>
                                                   <i onClick={() => {
                                                        navigate(`/series/${item.id}`)
-                                                       window.location.reload()
                                                   }} className="fas fa-play play-icon"></i>
                                              </div>
                                              <div className="movie-info">

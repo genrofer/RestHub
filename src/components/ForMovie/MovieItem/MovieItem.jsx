@@ -73,7 +73,7 @@ const MovieItem = () => {
           <motion.p className='d-flex item-settings'>
             <span className='movie-lang' >{movie.original_language ? movie.original_language : movie.name}</span>
             ●
-            <span><img src="http://preview.gentechtreedesign.com/streamlab/red-demo/wp-content/plugins/streamlab-core/public/img/imdb.png" /> {movie?.vote_average}</span>
+            <span><img src="https://preview.gentechtreedesign.com/streamlab/red-demo/wp-content/plugins/streamlab-core/public/img/imdb.png" /> {movie?.vote_average}</span>
             ●
             <span className='movie-year'>{year ? "New" : "Action"}</span>
           </motion.p>
