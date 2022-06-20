@@ -47,7 +47,11 @@ const MovieItem = () => {
   }, [movie])
 
   return (
-    <div className='movie-item d-flex'
+    <motion.div
+      initial={{ translateX: -1000, translateY: 0 }}
+      animate={{ translateX: 0, translateY: 0 }}
+      transition={{ duration: 1 }}
+      className='movie-item d-flex'
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0,0,0,0.6) 30%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.9) 100%), url("${`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}` || movie.backdrop_path}")`,
       }}
@@ -135,7 +139,7 @@ const MovieItem = () => {
       >
         <motion.a href='#clip' className='fas fa-play movie-item-trailer-icon'></motion.a>
       </motion.div>
-    </div >
+    </motion.div >
   )
 }
 

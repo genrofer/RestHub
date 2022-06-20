@@ -2,6 +2,7 @@ import "./Login.scss"
 import Logo from '../../assets/images/logo.png'
 import { NavLink, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 
 
 const Login = () => {
@@ -37,7 +38,12 @@ const Login = () => {
 
      }
      return (
-          <div className="login-hero">
+          <motion.div
+               className="login-hero"
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+               transition={{ duration: 1 }}
+          >
                <div className="logo">
                     <img src={Logo} alt="logo" />
                </div>
@@ -62,7 +68,7 @@ const Login = () => {
                          <p className="back2">This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.</p>
                     </div>
                </div>
-          </div>
+          </motion.div>
      )
 }
 

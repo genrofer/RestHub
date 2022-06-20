@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import axios from '../../../api/axios'
 
@@ -40,7 +41,8 @@ const Search = () => {
 
 
      return (
-          <div className='search-bar'>
+          <motion.div
+               className='search-bar'>
                <div className="search-bar-h">
 
                     <div className="search-bar-top">
@@ -75,7 +77,7 @@ const Search = () => {
                               }) : null
                     }
                </div>
-          </div >
+          </motion.div>
      )
 }
 
