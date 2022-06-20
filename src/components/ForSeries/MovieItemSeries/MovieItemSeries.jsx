@@ -13,13 +13,9 @@ const MovieItemSeries = () => {
   const [year, setYear] = useState()
   const [rating, setRating] = useState()
 
- 
-
-
-
   useEffect(() => {
     const fetchMovie = async () => {
-      const resData = await axios.get(`http://api.themoviedb.org/3/tv/${id}?api_key=13d142da634f37232d727abedb6908d7&language=en-US&append_to_response=credits,alternative_titles,videos,images,credits,keywords,reviews,similar,translations,external_ids,release_dates,last_episode_to_air`)
+      const resData = await axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=13d142da634f37232d727abedb6908d7&language=en-US&append_to_response=credits,alternative_titles,videos,images,credits,keywords,reviews,similar,translations,external_ids,release_dates,last_episode_to_air`)
       setMovie(resData.data)
       const str = document.querySelector('.movie-heading').textContent
       const arr = str.split(' ')
@@ -42,7 +38,7 @@ const MovieItemSeries = () => {
     fetchMovie()
 
 
-  }, [])
+  }, [id])
 
   return (
     <div className='movie-item d-flex'
@@ -71,7 +67,7 @@ const MovieItemSeries = () => {
           <motion.p className='d-flex item-settings'>
             <span className='movie-lang' >{movie.original_language ? movie.original_language : "Loading..."}</span>
             ●
-            <span><img src="http://preview.gentechtreedesign.com/streamlab/red-demo/wp-content/plugins/streamlab-core/public/img/imdb.png" /> {movie?.vote_average}</span>
+            <span><img src="https://preview.gentechtreedesign.com/streamlab/red-demo/wp-content/plugins/streamlab-core/public/img/imdb.png" /> {movie?.vote_average}</span>
             ●
             <span className='movie-year'>{year ? "New" : "Action"}</span>
           </motion.p>

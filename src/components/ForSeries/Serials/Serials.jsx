@@ -8,6 +8,7 @@ const Serials = () => {
      const popularRef = useRef()
      const navigate = useNavigate()
 
+
      const [movie, setMovie] = useState([])
      const [width, setWidth] = useState(0)
 
@@ -17,7 +18,7 @@ const Serials = () => {
                setMovie(resData.data.results)
           }
           fetchMovie()
-     }, [])
+     }, [movie])
 
      useEffect(() => {
           if(window.innerWidth < 768) {

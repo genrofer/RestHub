@@ -16,7 +16,7 @@ const MovieTrailer = () => {
 
      useEffect(() => {
           const fetchMovie = async () => {
-               const resData = await axios.get(`http://api.themoviedb.org/3/tv/${id}?api_key=13d142da634f37232d727abedb6908d7&language=en-US&append_to_response=credits,alternative_titles,videos,similar`)
+               const resData = await axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=13d142da634f37232d727abedb6908d7&language=en-US&append_to_response=credits,alternative_titles,videos,similar`)
                setMovie(resData.data.videos.results)
                setTrailer(resData.data.videos.results.filter(video => video.type == "Trailer"))
                setBehindTheScenes(resData.data.videos.results.filter(video => video.type == "Behind the Scenes"))
