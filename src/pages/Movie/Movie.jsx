@@ -3,6 +3,7 @@ import MovieItemNav from "../../components/ForMovie/MovieItemNav/MovieItemNav"
 import MovieActor from "../../components/ForMovie/MovieActor/MovieActor"
 import MovieTrailer from "../../components/ForMovie/MovieTrailer/MovieTrailer"
 import MovieSimilars from "../../components/ForMovie/MovieSimilars/MovieSimilars"
+import Footer from "../../components/ForHome/Footer/Footer"
 
 const Movie = () => {
      return (
@@ -12,6 +13,7 @@ const Movie = () => {
                <MovieActor />
                <MovieTrailer />
                <MovieSimilars />
+               <Footer />
           </>
      )
 }

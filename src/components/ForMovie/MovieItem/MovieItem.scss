@@ -209,3 +209,173 @@
           }
      }
 }
+
+@media only screen and (max-width: 1300px) {
+     .movie-item {
+          width: 100%;
+          height: 66vh;
+          .movie-item-info {
+               width: 100%;
+               margin-top: 10%;
+          }
+
+          .movie-item-info-top {
+               width: 80%;
+          }
+
+          .watch-trailer-icon {
+               a {
+                    font-size: 17px !important;
+                    width: 40px !important;
+                    height: 40px !important;
+               }
+               p {
+                    font-size: 22px !important;
+               }
+          }
+
+          &-trailer {
+               width: 100%;
+               margin-top: 34vh !important;
+               height: 35% !important;
+          }
+     }
+}
+
+@media only screen and (max-width: 1000px) {
+     .movie-item {
+          &-trailer {
+               width: 100%;
+               margin-top: 34vh !important;
+               height: 26% !important;
+          }
+     }
+}
+
+@media only screen and (max-width: 900px) {
+     .movie-item-info-top {
+          padding: 10px !important;
+          margin-top: 20px;
+          width: 80% !important;
+
+          .movie-heading {
+               font-size: 40px !important;
+               margin-bottom: 0px !important;
+          }
+
+          .item-settings {
+               margin-top: 0 !important;
+               .movie-lang,
+               .movie-year {
+                    font-size: 15px !important;
+               }
+
+               span {
+                    img {
+                         width: 40px !important;
+                    }
+               }
+          }
+
+          .movie-overview {
+               font-size: 10px !important;
+          }
+
+          .movie-genre-list {
+               margin-top: -5px !important;
+          }
+
+          .movie-genre-item {
+               font-size: 15px;
+          }
+     }
+
+     .watch-trailer-icon {
+          margin-top: 15px !important;
+     }
+
+     .movie-item {
+          &-trailer {
+               display: none;
+          }
+     }
+
+     .movie-cast {
+          display: none !important;
+     }
+}
+
+@media only screen and (max-width: 560px) {
+     .movie-item {
+          .watch-trailer-icon {
+               margin-top: 20px !important;
+               margin-left: 25px !important;
+
+               a {
+                    width: 30px !important;
+                    height: 30px !important;
+               }
+
+               p {
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                    font-size: 15px !important;
+               }
+          }
+
+          .movie-item-info-top {
+               margin-left: 20px;
+               margin-top: 30px !important;
+               .movie-heading {
+                    font-size: 40px !important;
+                    margin-bottom: 0px !important;
+               }
+          }
+     }
+}
+
+@media only screen and (max-width: 460px) {
+     .then-block {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .movie-item {
+          height: 56vh;
+          .watch-trailer-icon {
+               margin-top: 30px !important;
+               margin-left: 35px !important;
+
+               a {
+                    width: 30px !important;
+                    height: 30px !important;
+               }
+          }
+
+          .movie-item-info-top {
+               margin-left: 20px;
+               width: 90% !important;
+               padding-bottom: 10px !important;
+               margin-top: 50px !important;
+               .movie-heading {
+                    font-size: 30px !important;
+                    margin-bottom: 0px !important;
+               }
+          }
+
+          .movie-overview {
+               font-size: 9px !important;
+               margin-bottom: 0 !important;
+          }
+
+          .movie-genre-item {
+               font-size: 17px !important;
+          }
+     }
+}
+
+@media screen and (max-width: 370px) {
+     .movie-item {
+          height: 70vh;
+     }
+}

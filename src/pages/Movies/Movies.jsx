@@ -11,10 +11,10 @@ import Kids from "../../components/ForHome/Kids/Kids"
 import Comedy from "../../components/ForHome/Comedy/Comedy"
 import Documentary from "../../components/ForHome/Documentary/Documentary"
 import Toprated from "../../components/ForHome/Toprated/Toprated"
-import Footer from "../../components/ForHome/Footer/Footer"
 import Serials from "../../components/ForSeries/Serials/Serials"
 
 import "./Movies.scss"
+import Footer from "../../components/ForHome/Footer/Footer"
 
 const Movies = () => {
 
@@ -48,7 +48,7 @@ const Movies = () => {
                     <Toprated />
                     <Kids />
                </div>
-               {/* <Footer /> */}
+               <Footer />
           </div>
      )
 }

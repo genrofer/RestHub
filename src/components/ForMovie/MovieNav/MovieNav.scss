@@ -78,6 +78,16 @@
      }
 }
 
+.watchList {
+     i {
+          font-size: 33px;
+          margin-right: 26px;
+          margin-top: 3px;
+          color: #ff000d;
+          cursor: pointer;
+     }
+}
+
 @media screen and (max-width: 1000px) {
      .nav-top {
           position: absolute;
@@ -96,7 +106,6 @@
                position: absolute;
                right: 5%;
                .search {
-                    display: none;
                     align-items: center;
 
                     .search-icon {
@@ -129,14 +138,27 @@
 @media screen and (max-width: 600px) {
      .logo {
           img {
-               width: 50% !important;
+               width: 40% !important;
           }
      }
 
      .nav-top {
           .search-btn {
                font-size: 10px !important;
-               margin-right: 10px !important;
+               margin-right: -20px !important;
           }
+     }
+
+     .search {
+          margin-right: 12px !important;
+     }
+
+     .user {
+          height: 30px;
+     }
+
+     .watchList i {
+          font-size: 22px;
+          margin-right: 12px;
      }
 }

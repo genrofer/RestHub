@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import sorov from "../../../api/sorov"
 import axios from "../../../api/axios"
+import watchlist from '../../../api/watchlist'
 
 const MovieItemSeries = () => {
   const navigate = useNavigate()
@@ -39,6 +40,15 @@ const MovieItemSeries = () => {
 
 
   }, [id])
+
+  const addToList = () => {
+    if (watchlist.find(item => item.id === movie.id)) {
+      alert("Already in watchlist ❗")
+    } else {
+      watchlist.unshift(movie)
+      alert("Added to watchlist ✅")
+    }
+  }
 
   return (
     <div className='movie-item d-flex'
@@ -93,10 +103,17 @@ const MovieItemSeries = () => {
         </div>
 
 
-        <motion.div className='watch-trailer-icon d-flex'>
-          <motion.a href='#trailer' className='fas fa-play'></motion.a>
-          <motion.p>Watch Trailer</motion.p>
-        </motion.div>
+        <div className="d-flex then-block">
+          <motion.div className='watch-trailer-icon d-flex me-5'>
+            <motion.a href='#trailer' className='fas fa-play'></motion.a>
+            <motion.p>Watch Trailer</motion.p>
+          </motion.div>
+
+          <motion.div className='watch-trailer-icon d-flex'>
+            <motion.a onClick={addToList} className='fas fa-plus'></motion.a>
+            <motion.p>Add Watchlist</motion.p>
+          </motion.div>
+        </div>
 
         <motion.div className='movie-cast d-flex'>
           <motion.h2 className='movie-cast-heading' >

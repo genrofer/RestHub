@@ -13,6 +13,7 @@ const banner = [
                "KR"
           ],
           "original_language": "ko",
+          "media_type": "tv",
           "original_title": "All of us are dead",
           "overview": "A high school becomes ground zero for a zombie virus outbreak. Trapped students must fight their way out — or turn into one of the rabid infected.",
           "popularity": 906.145,
@@ -74,6 +75,7 @@ const banner = [
                "US"
           ],
           "original_language": "en",
+          "media_type": "tv",
           "original_title": "Stranger Things",
           "overview": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
           "popularity": 3571.914,
@@ -115,6 +117,7 @@ const banner = [
                "KR"
           ],
           "original_language": "ko",
+          "media_type": "tv",
           "original_title": "오징어 게임",
           "overview": "Hundreds of cash-strapped players accept a strange invitation to compete in children's games—with high stakes. But, a tempting prize awaits the victor.",
           "popularity": 513.75,
@@ -135,6 +138,7 @@ const banner = [
                "GB"
           ],
           "original_language": "en",
+          "media_type": "tv",
           "original_title": "Sex Education",
           "overview": "Inexperienced Otis channels his sex therapist mom when he teams up with rebellious Maeve to set up an underground sex therapy clinic at school.",
           "popularity": 315.669,

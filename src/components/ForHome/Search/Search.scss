@@ -3,6 +3,7 @@
      margin-bottom: 70px;
 
      &-top {
+          display: flex;
           position: absolute;
           top: 2%;
           left: 50%;
@@ -12,6 +13,7 @@
 
           .search-ico {
                font-size: 25px;
+               margin-top: 15px;
                cursor: pointer;
           }
      }
@@ -101,5 +103,45 @@
 
      &:hover {
           transform: perspective(1px) rotateY(1deg);
+     }
+}
+
+@media only screen and (max-width: 769px) {
+     .search-bar {
+          &-top {
+               width: 90%;
+          }
+          &-input {
+               width: 100%;
+               font-size: 20px;
+          }
+     }
+}
+
+@media only screen and (max-width: 500px) {
+     .search-bar {
+          &-top {
+               width: 70%;
+
+               .search-ico {
+                    font-size: 22px;
+                    margin-top: 5px;
+                    cursor: pointer;
+               }
+          }
+          &-input {
+               width: 100%;
+               font-size: 12px;
+               padding-bottom: 5px;
+          }
+     }
+
+     .searched-movies-item .movie-img {
+          width: 95px;
+          height: 135px;
+     }
+
+     .searched-movies {
+          margin-top: 18%;
      }
 }

@@ -9,7 +9,7 @@ const MovieNav = () => {
      const username1 = localStorage.getItem("username")
 
      window.scrollTo(0, 0)
-     
+
      const username = username1?.split("@")[0]
 
      const searchInput = () => {
@@ -27,6 +27,10 @@ const MovieNav = () => {
                <div className="sign-in d-flex p-4">
                     <div className="search me-4">
                          <i className="fas fa-search search-icon" onClick={() => navigate("/search")} aria-hidden="true"></i>
+                    </div>
+                    <div onClick={() => navigate("/watchlist")} className="watchList">
+                         <i class="fas fa-solid fa-clapperboard"></i>
+
                     </div>
                     {
                          username ? <div className="search-btn user"> <i className="fa fa-user me-2" aria-hidden="true"></i>

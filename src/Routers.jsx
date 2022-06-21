@@ -7,6 +7,7 @@ import Movie from './pages/Movie/Movie';
 import Series from './pages/Series/Series';
 import Search from './components/ForHome/Search/Search';
 import NotFound from './pages/NotFound/NotFound';
+import WatchList from './components/ForHome/WatchList/WatchList';
 
 import { AnimatePresence } from 'framer-motion';
 
@@ -21,6 +22,7 @@ const Routers = () => {
                     <Route path="/movie/:id" element={<Movie />} />
                     <Route path="/series/:id" element={<Series />} />
                     <Route path="/search/" element={<Search />} />
+                    <Route path="/watchlist/" element={<WatchList />} />
                     <Route path="/*" element={<NotFound />} />
                </Routes>
           </AnimatePresence>

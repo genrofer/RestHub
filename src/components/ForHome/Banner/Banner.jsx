@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import sorov from "../../../api/sorov"
+import watchlist from "../../../api/watchlist"
 import axios from "../../../api/axios"
 import "./Banner.scss"
 import { NavLink, useNavigate } from "react-router-dom"
@@ -40,6 +41,15 @@ const Banner = () => {
           fetchMovie()
      }, [])
 
+     const addToList = () => {
+          if (watchlist.find(item => item.id === movie.id)) {
+               alert("Already in watchlist ❗")
+          } else {
+               watchlist.unshift(movie)
+               alert("Added to watchlist ✅")
+          }
+     }
+
      return (
           <header>
 
@@ -62,13 +72,13 @@ const Banner = () => {
 
                               <div className="watch d-flex">
                                    <div className="watch-btn me-4">
-                                        <div onClick={() => navigate(`/movie/${movie.id}`)} className="button-container-2">
+                                        <div onClick={() => navigate(`/${movie.media_type == "tv" ? 'series' : 'movie'}/${movie.id}`)} className="button-container-2">
                                              <span className="mas"><i className="fas fa-solid fa-play me-1"></i> Watch now</span>
                                              <button type="button" name="Hover"><i className="fas fa-solid fa-play me-1"></i> Watch now</button>
                                         </div>
                                    </div>
                                    <div>
-                                        <div className="button-container-2 mas-class">
+                                        <div onClick={addToList} className="button-container-2 mas-class">
                                              <span className="mas"><i className="fas fa-solid fa-plus me-1"></i> Add to list</span>
                                              <button type="button" name="Hover"><i className="fas fa-solid fa-plus me-1"></i> Add to list</button>
                                         </div>
