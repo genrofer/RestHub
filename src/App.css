@@ -35,6 +35,10 @@ body::-webkit-scrollbar-thumb {
   background-image: -webkit-linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.4) 50%, transparent, transparent);
 }
 
+.containers {
+  max-width: 92%;
+  margin: 0 auto;
+}
 
 .d-flex {
   display: flex;

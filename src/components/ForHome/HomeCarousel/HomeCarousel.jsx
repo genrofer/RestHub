@@ -14,10 +14,6 @@ const MovieItem = () => {
      const [year, setYear] = useState()
      const [rating, setRating] = useState()
 
-
-
-
-
      useEffect(() => {
           const fetchMovie = async () => {
                const resData = banner[0]
@@ -40,7 +36,7 @@ const MovieItem = () => {
      }, [])
 
      return (
-          <div className='movie-item d-flex inner-carousel'
+          <div className='movie-item d-flex inner-carousel containers'
                style={{
                     backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("${`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}` || movie.backdrop_path}")`,
                }}
