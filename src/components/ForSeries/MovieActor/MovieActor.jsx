@@ -20,8 +20,8 @@ const Horror = () => {
           const fetchMovie = async () => {
                const resData = await axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=13d142da634f37232d727abedb6908d7&append_to_response=credits`)
                setMovie(resData.data.credits.cast)
-          } 
-          fetchMovie()   
+          }
+          fetchMovie()
      }, [id])
 
      useEffect(() => {
@@ -29,8 +29,8 @@ const Horror = () => {
                setWidth(window.innerWidth * 2.3)
           } else if (window.innerWidth < 500) {
                setWidth(window.innerWidth * 0.6)
-          } else {    
-               if(movie.length < 27){
+          } else {
+               if (movie.length < 27) {
                     setWidth(window.innerWidth * 3)
                } else {
                     setWidth(window.innerWidth * 63.6)
@@ -54,6 +54,8 @@ const Horror = () => {
                                              <div className="actor-img actor-img" style={{
                                                   backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 75%, rgba(1, 0, 0, 1) 100%), url("${`https://image.tmdb.org/t/p/original/${item?.profile_path}` || item.profile_path}")`,
                                              }}>
+                                                  <motion.div onClick={() => navigate(`/actor/${item.id}`)} className="fullview">Full View</motion.div>
+
                                                   <div className="actor-info">
                                                        <motion.p
                                                        >

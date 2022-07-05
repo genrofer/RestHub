@@ -26,10 +26,21 @@ const Footer = () => {
                     <li className='social-icons'>
                          <p>Follow us:</p>
                          <div className="d-flex">
-                              <i className="fab fa-facebook-f facebook"></i>
-                              <i className="fab fa-google google"></i>
-                              <i className="fab fa-twitter twitter"></i>
-                              <i className="fab fa-instagram instagram"></i>
+                              <a href="https://facebook.com" target="_blank">
+                                   <i className="fab fa-facebook-f facebook"></i>
+                              </a>
+
+                              <a href="https://google.com" target="_blank">
+                                   <i className="fab fa-google google"></i>
+                              </a>
+
+                              <a href="https://twitter.com" target="_blank">
+                                   <i className="fab fa-twitter twitter"></i>
+                              </a>
+
+                              <a href="https://instagram.com/muzaffar_abdusamadov" target="_blank">
+                                   <i className="fab fa-instagram instagram"></i>
+                              </a>
                          </div>
                     </li>
 

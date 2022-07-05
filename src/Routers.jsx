@@ -5,6 +5,7 @@ import Login from './pages/Login/Login';
 import Movies from './pages/Movies/Movies';
 import Movie from './pages/Movie/Movie';
 import Series from './pages/Series/Series';
+import Actors from './pages/Actors/Actors';
 import Search from './components/ForHome/Search/Search';
 import NotFound from './pages/NotFound/NotFound';
 import WatchList from './components/ForHome/WatchList/WatchList';
@@ -21,6 +22,7 @@ const Routers = () => {
                     <Route path="/movies" element={<Movies />} />
                     <Route path="/movie/:id" element={<Movie />} />
                     <Route path="/series/:id" element={<Series />} />
+                    <Route path="/actor/:id" element={<Actors />} />
                     <Route path="/search/" element={<Search />} />
                     <Route path="/watchlist/" element={<WatchList />} />
                     <Route path="/*" element={<NotFound />} />

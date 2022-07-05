@@ -181,6 +181,33 @@
      }
 }
 
+.fullview {
+     position: absolute;
+     cursor: pointer;
+     right: 50%;
+     bottom: 10px;
+     width: 100%;
+     font-weight: 700;
+     letter-spacing: 1px;
+     text-align: center;
+     transform: translate(50%, 0%);
+     z-index: 9999;
+     font-size: 25px;
+     color: black;
+     background: #ccc;
+     display: none;
+
+     &:hover {
+          background: #fff;
+          letter-spacing: 2px;
+     }
+}
+
+.actor-img:hover > .fullview {
+     display: block;
+     transition: all 0.5s ease-in;
+}
+
 @media only screen and (max-width: 500px) {
      #popular {
           margin-left: -70px;

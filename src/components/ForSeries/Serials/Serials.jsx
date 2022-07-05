@@ -30,7 +30,7 @@ const Serials = () => {
           }
      }, [])
      return (
-          <div id="popular">
+          <div id="series">
                <motion.div ref={popularRef}  className='caro'>
                     <h2 className="movie-h2">Series</h2>
                     <motion.div

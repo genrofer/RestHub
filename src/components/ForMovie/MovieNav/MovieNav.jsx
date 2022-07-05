@@ -35,7 +35,7 @@ const MovieNav = () => {
                               <a href="/movies#popular" className='nav-link'>Popular</a>
                          </li>
                          <li className='nav-li'>
-                              <a href="/movies#comedy" className='nav-link'>Comedy</a>
+                              <a href="/movies#series" className='nav-link'>Series</a>
                          </li>
                          <li className='nav-li'>
                               <a href="/movies#horror" className='nav-link'>Horror</a>

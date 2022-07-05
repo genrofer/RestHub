@@ -31,7 +31,7 @@ const Horror = () => {
           }
      }, [])
      return (
-          <div id="popular horror">
+          <div id="horror">
                <motion.div ref={popularRef}  className='caro'>
                     <h2 className="movie-h2">Horror</h2>
                     <motion.div

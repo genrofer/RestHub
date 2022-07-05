@@ -29,7 +29,7 @@ const Romance = () => {
           }
      }, [])
      return (
-          <div id="popular romance">
+          <div id="romance">
                <motion.div ref={popularRef}  className='caro'>
                     <h2 className="movie-h2">Romance</h2>
                     <motion.div
