@@ -21,7 +21,7 @@ const MovieItem = () => {
 
   useEffect(() => {
     const fetchMovie = async () => {
-      const resData = await axios.get(`http://api.themoviedb.org/3/person/${id}?api_key=13d142da634f37232d727abedb6908d7&language=en-US`)
+      const resData = await axios.get(`https://api.themoviedb.org/3/person/${id}?api_key=13d142da634f37232d727abedb6908d7&language=en-US`)
       const actorMovie = await axios.get(`https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=13d142da634f37232d727abedb6908d7&language=en-US`)
       const result = actorMovie.data.cast.sort((a, b) => Number(b.vote_count) - Number(a.vote_count));
       setActorMovie(result)
