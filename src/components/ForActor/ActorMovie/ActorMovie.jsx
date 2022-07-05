@@ -13,13 +13,16 @@ const MovieActor = () => {
      const { id } = useParams()
 
      const [movie, setMovie] = useState([])
-     const [width, setWidth] = useState(0)
+     const [actor, setActor] = useState()
 
 
      useEffect(() => {
           const fetchMovie = async () => {
+               const actor = await axios.get(`https://api.themoviedb.org/3/person/${id}?api_key=13d142da634f37232d727abedb6908d7&language=en-US`)
                const resData = await axios.get(`https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=13d142da634f37232d727abedb6908d7&language=en-US`)
                const result = resData.data.cast.sort((a, b) => Number(b.vote_count) - Number(a.vote_count));
+
+               setActor(actor.data)
                setMovie(result)
           }
           fetchMovie()
@@ -28,7 +31,7 @@ const MovieActor = () => {
      return (
           <div id="popular ">
                <motion.div ref={popularRef} id="actor-pop" className='caro'>
-                    <h2 className="movie-h2">Movies</h2>
+                    <h2 className="movie-h2">Movies by {actor?.name} </h2>
 
                     <motion.div
                          className='actor-movieses'
