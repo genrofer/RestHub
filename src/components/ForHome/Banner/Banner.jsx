@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import sorov from "../../../api/sorov"
-import watchlist from "../../../api/watchlist"
+// import watchlist from "../../../api/watchlist"
 import axios from "../../../api/axios"
 import "./Banner.scss"
 import { NavLink, useNavigate } from "react-router-dom"
@@ -17,10 +17,11 @@ import banner from "../../../api/banner"
 
 const Banner = () => {
 
+
      const navigate = useNavigate()
 
      const [movie, setMovie] = useState([])
-     const data = []
+     // const watchlist = localStorage.getItem("watchlist")
 
      useEffect(() => {
           const str = `${movie?.original_title || movie?.original_name || movie?.name}`
@@ -31,6 +32,11 @@ const Banner = () => {
      }, [movie])
 
      useEffect(() => {
+          if (localStorage.getItem("watchlist")) {
+
+          } else {
+               localStorage.setItem("watchlist", JSON.stringify([]))
+          }
           const fetchMovie = () => {
                const resData = banner
 
@@ -42,10 +48,13 @@ const Banner = () => {
      }, [])
 
      const addToList = () => {
-          if (watchlist.find(item => item.id === movie.id)) {
+          const existingEntries = JSON.parse(localStorage.getItem("watchlist"));
+          if (existingEntries == null) existingEntries = []
+          if (existingEntries.find(item => item.id === movie.id)) {
                alert("Already in watchlist ❗")
           } else {
-               watchlist.unshift(movie)
+               existingEntries.unshift(movie);
+               localStorage.setItem("watchlist", JSON.stringify(existingEntries));
                alert("Added to watchlist ✅")
           }
      }

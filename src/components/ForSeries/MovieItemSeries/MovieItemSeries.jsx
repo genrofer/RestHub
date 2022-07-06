@@ -3,13 +3,14 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import sorov from "../../../api/sorov"
 import axios from "../../../api/axios"
-import watchlist from '../../../api/watchlist'
+// import watchlist from '../../../api/watchlist'
 
 const MovieItemSeries = () => {
   const navigate = useNavigate()
   const { id } = useParams()
   const heading = useRef()
 
+  const watchlist = localStorage.getItem("watchlist")
   const [movie, setMovie] = useState([])
   const [year, setYear] = useState()
   const [rating, setRating] = useState()
@@ -42,10 +43,13 @@ const MovieItemSeries = () => {
   }, [id])
 
   const addToList = () => {
-    if (watchlist.find(item => item.id === movie.id)) {
+    const existingEntries = JSON.parse(localStorage.getItem("watchlist"));
+    if (existingEntries == null) existingEntries = []
+    if (existingEntries.find(item => item.id === movie.id)) {
       alert("Already in watchlist ❗")
     } else {
-      watchlist.unshift(movie)
+      existingEntries.unshift(movie);
+      localStorage.setItem("watchlist", JSON.stringify(existingEntries));
       alert("Added to watchlist ✅")
     }
   }

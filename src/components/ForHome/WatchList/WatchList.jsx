@@ -3,37 +3,36 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import axios from '../../../api/axios'
-import watchlist from '../../../api/watchlist'
 
 import "./WatchList.scss"
 
 const WatchList = () => {
      const navigate = useNavigate()
 
+     const watchlist = JSON.parse(localStorage.getItem("watchlist"));
+
      const [movie, setMovie] = useState("");
      const [search, setSearch] = useState("");
 
      useEffect(() => {
           const fetchMovie = () => {
-               const searchMovie = watchlist
+               const searchMovie = JSON.parse(localStorage.getItem("watchlist"));
                setMovie(searchMovie)
                console.log(searchMovie)
-          }
+          } 
           fetchMovie()
      }, [])
 
      const trashWatchList = () => {
-          watchlist.splice(0, watchlist.length)
-          navigate("/watchlist")
+          localStorage.removeItem("watchlist");
+          navigate("/movies")
      }
 
      return (
           <motion.div
-
                className='search-bar'
           >
                <div className="search-bar-h">
-
                     <div className="search-bar-top watchlist-top">
                          <h1 className='watch-heading first-child'>Your Watch List</h1>
                     </div>

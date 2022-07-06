@@ -11,8 +11,10 @@ function Hero() {
 
      const [input, setInput] = useState("");
 
+
      const setStorage = (e) => {
           e.preventDefault()
+
           localStorage.setItem("email", input);
           if (input == "") {
                document.querySelector(".required").classList.add("block")
