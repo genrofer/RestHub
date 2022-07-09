@@ -36,6 +36,8 @@ const banner = [
           "imdb_id": "tt4520988",
           "original_language": "en",
           "original_title": "Frozen II",
+          "name": "Frozen II",
+          "original_name": "Frozen II",
           "overview": "Elsa, Anna, Kristoff and Olaf head far into the forest to learn the truth about an ancient mystery of their kingdom.",
           "popularity": 158.925,
           "poster_path": "/mINJaa34MtknCYl5AjtNJzWj8cD.jpg",

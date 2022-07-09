@@ -89,7 +89,7 @@ const MovieItem = () => {
 
 
                     <motion.div className='watch-trailer-icon d-flex'>
-                         <motion.a onClick={() => navigate(`/series/${movie?.id}`)} className='fas fa-play'></motion.a>
+                         <motion.a onClick={() => navigate(`/movie/${movie?.id}`)} className='fas fa-play'></motion.a>
                          <motion.p>Watch Trailer</motion.p>
                     </motion.div>
 
@@ -100,13 +100,13 @@ const MovieItem = () => {
                          <motion.div className='movie-cast-list d-flex'>
 
                               <motion.div className='movie-cast-item'>
-                                   <motion.p>Lomon</motion.p>
+                                   <motion.p>Idina Menzel</motion.p>
                               </motion.div>
                               <motion.div className='movie-cast-item'>
-                                   <motion.p>Cho Yi-Hyun</motion.p>
+                                   <motion.p>Kristen Bell</motion.p>
                               </motion.div>
                               <motion.div className='movie-cast-item'>
-                                   <motion.p>Chang-Young Yon</motion.p>
+                                   <motion.p>Josh Gad</motion.p>
                               </motion.div>
 
                          </motion.div>
