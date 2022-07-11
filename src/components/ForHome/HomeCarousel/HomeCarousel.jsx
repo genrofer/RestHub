@@ -90,7 +90,7 @@ const MovieItem = () => {
 
                     <motion.div className='watch-trailer-icon d-flex'>
                          <motion.a onClick={() => navigate(`/movie/${movie?.id}`)} className='fas fa-play'></motion.a>
-                         <motion.p>Watch Trailer</motion.p>
+                         <motion.p>Watch Trailer </motion.p>
                     </motion.div>
 
                     <motion.div className='movie-cast d-flex'>
