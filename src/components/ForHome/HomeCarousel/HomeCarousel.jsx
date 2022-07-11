@@ -123,7 +123,7 @@ const MovieItem = () => {
                          opacity: [0, 1],
                     }}
                >
-                    <motion.a onClick={() => navigate(`/series/${movie?.id}`)} className='fas fa-play movie-item-trailer-icon'></motion.a>
+                    <motion.a onClick={() => navigate(`/movie/${movie?.id}`)} className='fas fa-play movie-item-trailer-icon'></motion.a>
                </motion.div>
           </div >
      )
