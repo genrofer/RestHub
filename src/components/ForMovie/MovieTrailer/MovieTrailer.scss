@@ -1,0 +1,36 @@
+.trailer-heading {
+     margin-left: 2%;
+     padding: 20px 75px;
+
+     h2 {
+          margin-left: -15px;
+     }
+}
+.iframe {
+     width: 100%;
+     height: 90vh;
+}
+
+@media only screen and (max-width: 769px) {
+     .trailer-heading {
+          padding: 20px 20px !important;
+     }
+     .iframe {
+          height: 38vh !important;
+     }
+}
+
+@media only screen and (max-width: 769px) {
+     .trailer-heading {
+          padding: 20px 20px !important;
+          margin-top: -60px;
+     }
+
+     .movie-h2 {
+          font-size: 20px;
+     }
+     .iframe {
+          height: 31vh !important;
+     }
+}
+     
